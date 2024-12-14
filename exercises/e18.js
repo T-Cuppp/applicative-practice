@@ -5,8 +5,9 @@
  */
 
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let asteroidYears = data.asteroids.map(m => m.discoveryYear)
+  let commonYear = asteroidYears.sort((a,b) => asteroidYears.filter(m => m === a).length - asteroidYears.filter(m => m === b).length).pop();
+  return commonYear
 }
 
 // === TEST YOURSELF ===
