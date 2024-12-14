@@ -5,7 +5,7 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  let planetName = data.planets.find((m) => m.moons.some(m => m === 'Daphnis'))
+  let planetName = data.planets.find((m) => m.moons.some(m => m === moonName))
   console.log(planetName.name)
   return planetName.name
 }
