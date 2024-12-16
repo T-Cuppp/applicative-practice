@@ -5,9 +5,9 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
-  let moonsSum = data.planets.filter(m => m.moons).flatMap(planets => planets.moons).length
-  
-  return moonsSum
+  return data.planets
+    .filter(m => m.moons)
+    .flatMap(planets => planets.moons).length
 }
 
 

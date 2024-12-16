@@ -6,8 +6,13 @@
 
 export function getGreatestDiscoveryYear(data) {
   let asteroidYears = data.asteroids.map(m => m.discoveryYear)
-  let commonYear = asteroidYears.sort((a,b) => asteroidYears.filter(m => m === a).length - asteroidYears.filter(m => m === b).length).pop();
-  return commonYear
+  return asteroidYears
+    .sort(
+      (a,b) => 
+        asteroidYears.filter(m => m === a).length -
+        asteroidYears.filter(m => m === b).length
+      )
+      .pop();
 }
 
 // === TEST YOURSELF ===
